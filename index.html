@@ -1,124 +1,155 @@
-<!-- Header / Navigation -->
-<header class="sticky top-0 z-50 bg-darkBg/80 backdrop-blur-md border-b border-slate-800">
-    <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
-        <span class="font-bold text-lg text-accent tracking-wider">PORTFOLIO</span>
-        <nav class="hidden md:flex space-x-8 text-sm font-medium">
-            <a href="#about" class="hover:text-accent transition-colors">About</a>
-            <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
-            <a href="#cv" class="hover:text-accent transition-colors">CV</a>
-            <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
-        </nav>
-    </div>
-</header>
-
-<!-- Main Container -->
-<main class="max-w-5xl mx-auto px-6 py-12 space-y-20">
-
-    <!-- Introduction Section -->
-    <section id="about" class="flex flex-col md:flex-row items-center justify-between gap-12 pt-8">
-        <div class="space-y-6 flex-1">
-            <div class="inline-block px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-semibold tracking-wide border border-accent/20">
-                Lycée Guillaume Kroll • DT Informatique
-            </div>
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
-                Hi, I'm <span class="text-accent">Your Name</span>
-            </h1>
-            <p class="text-slate-400 text-lg leading-relaxed">
-                A passionate IT student specializing in systems, networking, and modern automation workflows. I love building practical technical solutions and expanding my digital skillset.
-            </p>
-            <div class="flex gap-4 pt-2">
-                <a href="#cv" class="px-6 py-3 bg-accent text-darkBg font-semibold rounded-lg hover:bg-sky-400 transition-all shadow-lg shadow-accent/10">
-                    View CV
-                </a>
-                <a href="#contact" class="px-6 py-3 bg-cardBg border border-slate-700 text-slate-200 font-semibold rounded-lg hover:bg-slate-800 transition-all">
-                    Get in Touch
-                </a>
-            </div>
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damir Korac - Portfolio</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --border: #334155;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(to right, #1e293b, #0f172a);
+            border-bottom: 1px solid var(--border);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+        h2 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+        }
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            border-color: var(--accent);
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .badge {
+            background-color: #0f172a;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        ul {
+            padding-left: 1.5rem;
+            color: var(--text-muted);
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        li strong {
+            color: var(--text);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container" style="padding: 0;">
+            <h1>Hi, ich bin Damir Korac</h1>
+            <p class="subtitle">22 Jahre alt • IT-Student & Netzwerk-Techniker @ Lycée Guillaume Kroll</p>
         </div>
-        <div class="w-48 h-48 md:w-64 md:h-64 rounded-2xl bg-gradient-to-tr from-accent to-indigo-500 p-1 shadow-2xl flex items-center justify-center">
-            <div class="w-full h-full bg-cardBg rounded-2xl flex items-center justify-center text-5xl font-bold text-accent">
-                IT
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Über mich</h2>
+            <p>Leidenschaftlicher IT-Student mit Spezialisierung auf Systeme, Netzwerke und moderne Automatisierungsworkflows. Ich liebe es, praktische technische Lösungen aufzubauen und meine digitalen Fähigkeiten kontinuierlich zu erweitern.</p>
+        </section>
+
+        <section class="card">
+            <h2>Computer Science Skills</h2>
+            <div class="skills-grid">
+                <span class="badge">System Administration & Networking</span>
+                <span class="badge">FRITZ!Box & Pi-hole</span>
+                <span class="badge">AWS EC2 & Cloud Hosting</span>
+                <span class="badge">Zabbix Monitoring</span>
+                <span class="badge">Workflow Automation & Scripting</span>
+                <span class="badge">HTML, CSS, JavaScript</span>
+                <span class="badge">Hardware & Troubleshooting</span>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skillset Section -->
-    <section id="skills" class="space-y-8">
-        <h2 class="text-2xl font-bold border-b border-slate-800 pb-3">Skillset & Expertise</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Computer Science Skills -->
-            <div class="bg-cardBg p-6 rounded-xl border border-slate-800 shadow-md">
-                <h3 class="text-lg font-semibold text-accent mb-4">💻 Computer Science</h3>
-                <ul class="space-y-2 text-slate-300 text-sm">
-                    <li>• System Administration & Networking</li>
-                    <li>• Workflow Automation & Scripting</li>
-                    <li>• HTML, CSS, JavaScript</li>
-                    <li>• Hardware & Troubleshooting</li>
-                </ul>
-            </div>
+        <section class="card">
+            <h2>Sprachen</h2>
+            <ul>
+                <li><strong>Englisch:</strong> Professionell</li>
+                <li><strong>Französisch / Deutsch:</strong> Fließend</li>
+                <li><strong>Chinesisch:</strong> Tägliches Lernen & Praxis</li>
+            </ul>
+        </section>
 
-            <!-- Languages -->
-            <div class="bg-cardBg p-6 rounded-xl border border-slate-800 shadow-md">
-                <h3 class="text-lg font-semibold text-accent mb-4">🌍 Languages</h3>
-                <ul class="space-y-2 text-slate-300 text-sm">
-                    <li>• English (Professional)</li>
-                    <li>• French / German (Fluent)</li>
-                    <li>• Chinese (Studying / Daily Practice)</li>
-                </ul>
-            </div>
+        <section class="card">
+            <h2>Ausbildung & Lebenslauf</h2>
+            <h3 style="margin-top: 0; color: var(--text);">DT Informatique</h3>
+            <p style="color: var(--text-muted); margin-bottom: 1rem;"><strong>Lycée Guillaume Kroll (LGK)</strong> • 4-jähriges technisches Diplomprogramm (2022–2026)</p>
+            <p style="color: var(--text-muted);">Aktiver Fokus auf praktische IT-Projekte, Netzwerk-Setups und moderne Automatisierung.</p>
+        </section>
 
-            <!-- Hobbies -->
-            <div class="bg-cardBg p-6 rounded-xl border border-slate-800 shadow-md">
-                <h3 class="text-lg font-semibold text-accent mb-4">🎯 Hobbies & Interests</h3>
-                <ul class="space-y-2 text-slate-300 text-sm">
-                    <li>• Coding & Automating Tasks</li>
-                    <li>• Cloud & Cyber Security concepts</li>
-                    <li>• Exploring new technologies</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        <section class="card">
+            <h2>Hobbys & Interessen</h2>
+            <ul>
+                <li>Coding & Task Automation</li>
+                <li>Cloud & Cyber Security Konzepte</li>
+                <li>Erkunden neuer Technologien</li>
+            </ul>
+        </section>
+    </main>
 
-    <!-- CV Section -->
-    <section id="cv" class="space-y-8">
-        <h2 class="text-2xl font-bold border-b border-slate-800 pb-3">Curriculum Vitae</h2>
-        <div class="bg-cardBg p-8 rounded-xl border border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div>
-                <h3 class="text-xl font-bold">DT Informatique</h3>
-                <p class="text-slate-400 text-sm mt-1">Lycée Guillaume Kroll (LGK) • 4-year technical diploma program.</p>
-                <p class="text-slate-500 text-xs mt-2">Active focus on practical IT projects, network setups, and modern workflows.</p>
-            </div>
-            <div class="flex gap-4">
-                <a href="#" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-accent text-sm font-medium rounded-lg border border-slate-700 transition-colors">
-                    Download CV (EN)
-                </a>
-                <a href="#" class="px-5 py-2.5 bg-slate-800 hover:bg-slate-700 text-accent text-sm font-medium rounded-lg border border-slate-700 transition-colors">
-                    Download CV (FR)
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="space-y-8 text-center pb-12">
-        <h2 class="text-2xl font-bold border-b border-slate-800 pb-3 text-left">Get In Touch</h2>
-        <p class="text-slate-400 max-w-xl mx-auto">
-            Interested in working together or want to check out my source code? Feel free to visit my GitHub profile or send an email.
-        </p>
-        <div class="flex justify-center gap-4 pt-4">
-            <a href="https://github.com" target="_blank" class="px-6 py-3 bg-cardBg border border-slate-700 font-medium rounded-lg hover:border-accent transition-colors">
-                GitHub Profile
-            </a>
-            <a href="mailto:your.email@example.com" class="px-6 py-3 bg-accent text-darkBg font-semibold rounded-lg hover:bg-sky-400 transition-all">
-                Send Email
-            </a>
-        </div>
-    </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="border-t border-slate-800 bg-darkBg py-8 text-center text-xs text-slate-500">
-    <p>© 2026 • Built with HTML & Tailwind CSS for Lycée Guillaume Kroll Portfolio Project.</p>
-</footer>
+    <footer>
+        <p>&copy; 2026 Damir Korac • Hosted on GitHub Pages</p>
+    </footer>
+</body>
+</html>
